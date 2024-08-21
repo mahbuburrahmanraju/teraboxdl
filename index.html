@@ -68,6 +68,17 @@
             margin-top: 10px;
         }
 
+        #videoThumbnail {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
         .video-js {
             width: 100%;
             margin-top: 20px;
@@ -75,12 +86,6 @@
 
         .details {
             margin-top: 20px;
-        }
-
-        .details img {
-            margin-top: 10px;
-            max-width: 100%;
-            border-radius: 8px;
         }
 
         .details a {
@@ -121,7 +126,8 @@
             <div class="details">
                 <a rel="noreferrer noopener" id="fastDownload" href="#" target="_blank">Fast Download</a>
                 <a rel="noreferrer noopener" id="hdDownload" href="#" target="_blank">HD Video</a>
-                <img id="videoThumbnail" src="" alt="Thumbnail">
+                <a rel="noreferrer noopener" id="videoThumbnail" href="#" target="_blank">Get Thumbnail</a>
+                
             </div>
         </div>
     </div>
@@ -146,7 +152,7 @@
             const videoData = data.response[0];
 
             videoTitle.innerText = videoData.title;
-            videoThumbnail.src = videoData.thumbnail;
+            videoThumbnail.herf = videoData.thumbnail;
             fastDownload.href = videoData.resolutions["Fast Download"];
             hdDownload.href = videoData.resolutions["HD Video"];
 
